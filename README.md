@@ -1,6 +1,7 @@
 # Mattermost MySQL Backup and Upload to AWS S3
 This script creates a backup of a Mattermost MySQL database and uploads it to an AWS S3 bucket. The script is written in Bash.
 
+<img src =./images/mm_mysqldump_AWS_S3.png/><br>
 <hr>
 
 ## Prerequisites
