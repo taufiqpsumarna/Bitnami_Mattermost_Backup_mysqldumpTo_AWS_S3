@@ -24,11 +24,13 @@ BACKUP_PATH="$BACKUP_DIR/$FILENAME.sql.gz"
 mkdir -p $BACKUP_DIR
 
 #Create Credential File
-DB_ACCESS=./mysql-credentials.cnf
+DB_ACCESS=./tmp/mysqldump/mysql-credentials.cnf
 
-echo "[client]" > $DB_ACCESS
-echo "user=$DB_USER" >> $DB_ACCESS
-echo "password=$DB_PASS" >> $DB_ACCESS
+cat <<EOF > $DB_ACCESS
+[client]
+"user=$DB_USER"
+"password=$DB_PASS"
+EOF
 
 echo $BACKUP_DEST
 
